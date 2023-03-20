@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pytest_asyncio
-URL = https://files.pythonhosted.org/packages/6e/06/38b0ca5d53582bb49697626975b5540435ea064762d852b5c66646c729e9/pytest-asyncio-0.20.3.tar.gz
+URL = https://files.pythonhosted.org/packages/85/c7/9db0c6215f12f26b590c24acc96d048e03989315f198454540dff95109cd/pytest-asyncio-0.21.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
