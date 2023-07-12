@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pytest_asyncio
-Version  : 0.21.0
-Release  : 50
-URL      : https://files.pythonhosted.org/packages/85/c7/9db0c6215f12f26b590c24acc96d048e03989315f198454540dff95109cd/pytest-asyncio-0.21.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/85/c7/9db0c6215f12f26b590c24acc96d048e03989315f198454540dff95109cd/pytest-asyncio-0.21.0.tar.gz
+Version  : 0.21.1
+Release  : 51
+URL      : https://files.pythonhosted.org/packages/5a/85/d39ef5f69d5597a206f213ce387bcdfa47922423875829f7a98a87d33281/pytest-asyncio-0.21.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/5a/85/d39ef5f69d5597a206f213ce387bcdfa47922423875829f7a98a87d33281/pytest-asyncio-0.21.1.tar.gz
 Summary  : Pytest support for asyncio
 Group    : Development/Tools
 License  : Apache-2.0
@@ -16,7 +16,6 @@ Requires: pypi-pytest_asyncio-python = %{version}-%{release}
 Requires: pypi-pytest_asyncio-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(py)
-BuildRequires : pypi(pytest)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(setuptools_scm)
 BuildRequires : pypi(wheel)
@@ -35,7 +34,7 @@ pytest-asyncio
 :target: https://pypi.python.org/pypi/pytest-asyncio
 .. image:: https://github.com/pytest-dev/pytest-asyncio/workflows/CI/badge.svg
 :target: https://github.com/pytest-dev/pytest-asyncio/actions?workflow=CI
-.. image:: https://codecov.io/gh/pytest-dev/pytest-asyncio/branch/master/graph/badge.svg
+.. image:: https://codecov.io/gh/pytest-dev/pytest-asyncio/branch/main/graph/badge.svg
 :target: https://codecov.io/gh/pytest-dev/pytest-asyncio
 .. image:: https://img.shields.io/pypi/pyversions/pytest-asyncio.svg
 :target: https://github.com/pytest-dev/pytest-asyncio
@@ -72,10 +71,10 @@ python3 components for the pypi-pytest_asyncio package.
 
 
 %prep
-%setup -q -n pytest-asyncio-0.21.0
-cd %{_builddir}/pytest-asyncio-0.21.0
+%setup -q -n pytest-asyncio-0.21.1
+cd %{_builddir}/pytest-asyncio-0.21.1
 pushd ..
-cp -a pytest-asyncio-0.21.0 buildavx2
+cp -a pytest-asyncio-0.21.1 buildavx2
 popd
 
 %build
@@ -83,12 +82,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679327471
+export SOURCE_DATE_EPOCH=1689177049
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
