@@ -7,7 +7,7 @@
 #
 Name     : pypi-pytest_asyncio
 Version  : 0.23.2
-Release  : 54
+Release  : 55
 URL      : https://files.pythonhosted.org/packages/1e/4a/9ed4762a08facf8dfb2e31b0393913e3dce391a7735e0965c0f2e66f0938/pytest-asyncio-0.23.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/1e/4a/9ed4762a08facf8dfb2e31b0393913e3dce391a7735e0965c0f2e66f0938/pytest-asyncio-0.23.2.tar.gz
 Summary  : Pytest support for asyncio
@@ -85,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1701899628
+export SOURCE_DATE_EPOCH=1702070955
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
