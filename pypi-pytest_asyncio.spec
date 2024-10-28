@@ -7,7 +7,7 @@
 #
 Name     : pypi-pytest_asyncio
 Version  : 0.24.0
-Release  : 64
+Release  : 65
 URL      : https://files.pythonhosted.org/packages/52/6d/c6cf50ce320cf8611df7a1254d86233b3df7cc07f9b5f5cbcb82e08aa534/pytest_asyncio-0.24.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/52/6d/c6cf50ce320cf8611df7a1254d86233b3df7cc07f9b5f5cbcb82e08aa534/pytest_asyncio-0.24.0.tar.gz
 Summary  : Pytest support for asyncio
