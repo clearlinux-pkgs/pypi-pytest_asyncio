@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : pypi-pytest_asyncio
-Version  : 0.25.0
-Release  : 66
-URL      : https://files.pythonhosted.org/packages/94/18/82fcb4ee47d66d99f6cd1efc0b11b2a25029f303c599a5afda7c1bca4254/pytest_asyncio-0.25.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/94/18/82fcb4ee47d66d99f6cd1efc0b11b2a25029f303c599a5afda7c1bca4254/pytest_asyncio-0.25.0.tar.gz
+Version  : 0.25.1
+Release  : 67
+URL      : https://files.pythonhosted.org/packages/4b/04/0477a4bdd176ad678d148c075f43620b3f7a060ff61c7da48500b1fa8a75/pytest_asyncio-0.25.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/4b/04/0477a4bdd176ad678d148c075f43620b3f7a060ff61c7da48500b1fa8a75/pytest_asyncio-0.25.1.tar.gz
 Summary  : Pytest support for asyncio
 Group    : Development/Tools
 License  : Apache-2.0
@@ -74,10 +74,10 @@ python3 components for the pypi-pytest_asyncio package.
 
 
 %prep
-%setup -q -n pytest_asyncio-0.25.0
-cd %{_builddir}/pytest_asyncio-0.25.0
+%setup -q -n pytest_asyncio-0.25.1
+cd %{_builddir}/pytest_asyncio-0.25.1
 pushd ..
-cp -a pytest_asyncio-0.25.0 buildavx2
+cp -a pytest_asyncio-0.25.1 buildavx2
 popd
 
 %build
@@ -85,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1735098767
+export SOURCE_DATE_EPOCH=1735830450
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
